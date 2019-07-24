@@ -1,3 +1,21 @@
-<p>
-  course works!
-</p>
+<div *ngIf="errorMsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{errorMsg}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+  <div *ngIf="course" class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{course.name}}</h5>
+        <label><b>Id</b>&nbsp;{{course.id}}</label>
+        &nbsp; &nbsp;
+        <label><b>Department Code</b>&nbsp;<em>{{course.department_code}}</em></label>
+        &nbsp; &nbsp;
+        <label><b>Course Code</b>&nbsp;<em>{{course.code}}</em></label>
+         &nbsp; &nbsp;
+        <label><b>Semester Offered</b>&nbsp;<em>{{course.semester_offered}}</em></label>
+        <hr>
+        <label class="lead">Description</label>
+        <p class="card-text">{{course.description}}</p>
+      </div>
+  </div>

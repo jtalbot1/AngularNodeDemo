@@ -1,11 +1,8 @@
-<h1>Student Management</h1>
-
-<courses></courses>
-
-<ag-grid-angular 
-    style="width: 500px; height: 500px;" 
-    class="ag-theme-balham"
-    [rowData]="rowData" 
-    [columnDefs]="columnDefs"
-    >
-</ag-grid-angular>
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="container-fluid">
+        <div style="padding:1%;" class="col-12">
+            <router-outlet></router-outlet>  
+        </div>
+    </div>
+</div>
